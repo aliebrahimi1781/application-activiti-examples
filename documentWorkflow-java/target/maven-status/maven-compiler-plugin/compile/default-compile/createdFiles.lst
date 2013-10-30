@@ -1,0 +1,5 @@
+org/xwiki/activiti/documentWorkflow/ApproveArticleCreationTaskListener.class
+org/xwiki/activiti/documentWorkflow/WriteArticleTaskListener.class
+org/xwiki/activiti/documentWorkflow/DescribeArticleTaskListener.class
+org/xwiki/activiti/documentWorkflow/ReviewTaskListener.class
+org/xwiki/activiti/documentWorkflow/ImproveArticleTaskListener.class
