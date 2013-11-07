@@ -23,4 +23,4 @@ This is just a simple bpmn file which you have to import into the Activiti Engin
 ### 2. Document workflow
 This is a more complex document workflow scenario. It also uses Java as backend in order to make the process more dynamic and self-aware.
 
-###For moew details, please open the process definition files (*.bpmn) using the dedicated Eclipse plugin in order to see the process diagram and its details.
+###For more details, please open the process definition files (*.bpmn) using the dedicated Eclipse plugin in order to see the process diagram and its details.
