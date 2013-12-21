@@ -1,38 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:activiti="http://activiti.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.activiti.org/test">
-  <process id="demoProcess1" name="Demo Process 1" isExecutable="true" activiti:candidateStarterUsers="xwiki:XWiki.Admin" xmlns:activiti="http://activiti.org/bpmn" activiti:candidateStarterUsers="xwiki:XWiki.sorinello">
-    <documentation>The simplest process possible. It has one task which is assigned to the Admin user
-</documentation>
+  <process id="myProcess" name="My process" isExecutable="true" activiti:candidateStarterUsers="xwiki:XWiki.Admin">
     <startEvent id="startevent1" name="Start"></startEvent>
-    <userTask id="usertask1" name="Simple Task" activiti:assignee="xwiki:XWiki.Admin">
-      <extensionElements>
-        <activiti:formProperty id="nume" name="nume" type="string" variable="nume" required="true"></activiti:formProperty>
-        <activiti:formProperty id="prenume" name="prenume" type="string" variable="prenume" required="true"></activiti:formProperty>
-        <activiti:formProperty id="strada" name="strada" type="string" variable="strada" required="true"></activiti:formProperty>
-      </extensionElements>
-    </userTask>
-    <sequenceFlow id="flow1" sourceRef="startevent1" targetRef="usertask1"></sequenceFlow>
+    <userTask id="usertask1" name="User Task"></userTask>
     <endEvent id="endevent1" name="End"></endEvent>
-    <sequenceFlow id="flow2" sourceRef="usertask1" targetRef="endevent1"></sequenceFlow>
+    <sequenceFlow id="flow1" sourceRef="usertask1" targetRef="endevent1"></sequenceFlow>
+    <sequenceFlow id="flow2" sourceRef="startevent1" targetRef="usertask1"></sequenceFlow>
   </process>
-  <bpmndi:BPMNDiagram id="BPMNDiagram_demoProcess1">
-    <bpmndi:BPMNPlane bpmnElement="demoProcess1" id="BPMNPlane_demoProcess1">
+  <bpmndi:BPMNDiagram id="BPMNDiagram_myProcess">
+    <bpmndi:BPMNPlane bpmnElement="myProcess" id="BPMNPlane_myProcess">
       <bpmndi:BPMNShape bpmnElement="startevent1" id="BPMNShape_startevent1">
-        <omgdc:Bounds height="35.0" width="35.0" x="20.0" y="60.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="20.0" y="30.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="usertask1" id="BPMNShape_usertask1">
-        <omgdc:Bounds height="55.0" width="105.0" x="90.0" y="50.0"></omgdc:Bounds>
+        <omgdc:Bounds height="55.0" width="105.0" x="90.0" y="20.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape bpmnElement="endevent1" id="BPMNShape_endevent1">
-        <omgdc:Bounds height="35.0" width="35.0" x="230.0" y="60.0"></omgdc:Bounds>
+        <omgdc:Bounds height="35.0" width="35.0" x="250.0" y="30.0"></omgdc:Bounds>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge bpmnElement="flow1" id="BPMNEdge_flow1">
-        <omgdi:waypoint x="55.0" y="77.0"></omgdi:waypoint>
-        <omgdi:waypoint x="90.0" y="77.0"></omgdi:waypoint>
+        <omgdi:waypoint x="195.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="250.0" y="47.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge bpmnElement="flow2" id="BPMNEdge_flow2">
-        <omgdi:waypoint x="195.0" y="77.0"></omgdi:waypoint>
-        <omgdi:waypoint x="230.0" y="77.0"></omgdi:waypoint>
+        <omgdi:waypoint x="55.0" y="47.0"></omgdi:waypoint>
+        <omgdi:waypoint x="90.0" y="47.0"></omgdi:waypoint>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
